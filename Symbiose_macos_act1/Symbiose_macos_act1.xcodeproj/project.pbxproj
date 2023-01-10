@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB635EB2296C7B47003C52E2 /* Symbiose_macos_act1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EB1296C7B47003C52E2 /* Symbiose_macos_act1App.swift */; };
+		AB635EB4296C7B47003C52E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EB3296C7B47003C52E2 /* ContentView.swift */; };
+		AB635EB6296C7B48003C52E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB635EB5296C7B48003C52E2 /* Assets.xcassets */; };
+		AB635EB9296C7B48003C52E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB635EB8296C7B48003C52E2 /* Preview Assets.xcassets */; };
+		AB635EC4296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EC3296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift */; };
+		AB635ECE296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635ECD296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift */; };
+		AB635ED0296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635ECF296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift */; };
+		AB635EE0296C7F29003C52E2 /* BLEManagerEsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */; };
+		AB635EE2296C7F33003C52E2 /* BLEObservableIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE1296C7F33003C52E2 /* BLEObservableIos.swift */; };
+		AB635EE4296C7F3E003C52E2 /* BLEObservableEsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */; };
+		AB635EE6296C7F52003C52E2 /* BLEUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE5296C7F52003C52E2 /* BLEUtils.swift */; };
+		AB635EE8296C81CA003C52E2 /* BLEManagerIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE7296C81CA003C52E2 /* BLEManagerIos.swift */; };
+		AB635EEA296C82B0003C52E2 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE9296C82B0003C52E2 /* BLEController.swift */; };
+		AB635EED296C842F003C52E2 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EEC296C842F003C52E2 /* CustomVideoPlayer.swift */; };
+		AB635EEF296C8461003C52E2 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EEE296C8460003C52E2 /* VideoManager.swift */; };
+		AB635EF1296C8673003C52E2 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB635EF0296C866F003C52E2 /* video.mp4 */; };
+		AB635EF4296CD341003C52E2 /* Symbiose-macos-act1-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB635EF3296CD340003C52E2 /* Symbiose-macos-act1-Info.plist */; };
+		AB635F9C296D9985003C52E2 /* MicrophoneMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */; };
+		AB635F9F296DA306003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
+		AB635FA0296DA306003C52E2 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB635EC0296C7B48003C52E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB635EA6296C7B47003C52E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB635EAD296C7B47003C52E2;
+			remoteInfo = Symbiose_macos_act1;
+		};
+		AB635ECA296C7B48003C52E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB635EA6296C7B47003C52E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB635EAD296C7B47003C52E2;
+			remoteInfo = Symbiose_macos_act1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB635EAE296C7B47003C52E2 /* Symbiose_macos_act1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symbiose_macos_act1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB635EB1296C7B47003C52E2 /* Symbiose_macos_act1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1App.swift; sourceTree = "<group>"; };
+		AB635EB3296C7B47003C52E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB635EB5296C7B48003C52E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB635EB8296C7B48003C52E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB635EBA296C7B48003C52E2 /* Symbiose_macos_act1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Symbiose_macos_act1.entitlements; sourceTree = "<group>"; };
+		AB635EBF296C7B48003C52E2 /* Symbiose_macos_act1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Symbiose_macos_act1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB635EC3296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1Tests.swift; sourceTree = "<group>"; };
+		AB635EC9296C7B48003C52E2 /* Symbiose_macos_act1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Symbiose_macos_act1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB635ECD296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1UITests.swift; sourceTree = "<group>"; };
+		AB635ECF296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp.swift; sourceTree = "<group>"; };
+		AB635EE1296C7F33003C52E2 /* BLEObservableIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableIos.swift; sourceTree = "<group>"; };
+		AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp.swift; sourceTree = "<group>"; };
+		AB635EE5296C7F52003C52E2 /* BLEUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEUtils.swift; sourceTree = "<group>"; };
+		AB635EE7296C81CA003C52E2 /* BLEManagerIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerIos.swift; sourceTree = "<group>"; };
+		AB635EE9296C82B0003C52E2 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		AB635EEC296C842F003C52E2 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		AB635EEE296C8460003C52E2 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		AB635EF0296C866F003C52E2 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		AB635EF3296CD340003C52E2 /* Symbiose-macos-act1-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Symbiose-macos-act1-Info.plist"; sourceTree = "<group>"; };
+		AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneMonitor.swift; sourceTree = "<group>"; };
+		AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
+		AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB635EAB296C7B47003C52E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EBC296C7B48003C52E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EC6296C7B48003C52E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB635EA5296C7B47003C52E2 = {
+			isa = PBXGroup;
+			children = (
+				AB635EF3296CD340003C52E2 /* Symbiose-macos-act1-Info.plist */,
+				AB635EB0296C7B47003C52E2 /* Symbiose_macos_act1 */,
+				AB635EC2296C7B48003C52E2 /* Symbiose_macos_act1Tests */,
+				AB635ECC296C7B48003C52E2 /* Symbiose_macos_act1UITests */,
+				AB635EAF296C7B47003C52E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB635EAF296C7B47003C52E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EAE296C7B47003C52E2 /* Symbiose_macos_act1.app */,
+				AB635EBF296C7B48003C52E2 /* Symbiose_macos_act1Tests.xctest */,
+				AB635EC9296C7B48003C52E2 /* Symbiose_macos_act1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB635EB0296C7B47003C52E2 /* Symbiose_macos_act1 */ = {
+			isa = PBXGroup;
+			children = (
+				AB635F99296D995F003C52E2 /* audio */,
+				AB635EEB296C835A003C52E2 /* video */,
+				AB635EDC296C7BE9003C52E2 /* ble */,
+				AB635EB1296C7B47003C52E2 /* Symbiose_macos_act1App.swift */,
+				AB635EB3296C7B47003C52E2 /* ContentView.swift */,
+				AB635EB5296C7B48003C52E2 /* Assets.xcassets */,
+				AB635EBA296C7B48003C52E2 /* Symbiose_macos_act1.entitlements */,
+				AB635EB7296C7B48003C52E2 /* Preview Content */,
+			);
+			path = Symbiose_macos_act1;
+			sourceTree = "<group>";
+		};
+		AB635EB7296C7B48003C52E2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EB8296C7B48003C52E2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB635EC2296C7B48003C52E2 /* Symbiose_macos_act1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EC3296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift */,
+			);
+			path = Symbiose_macos_act1Tests;
+			sourceTree = "<group>";
+		};
+		AB635ECC296C7B48003C52E2 /* Symbiose_macos_act1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB635ECD296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift */,
+				AB635ECF296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift */,
+			);
+			path = Symbiose_macos_act1UITests;
+			sourceTree = "<group>";
+		};
+		AB635EDC296C7BE9003C52E2 /* ble */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EE9296C82B0003C52E2 /* BLEController.swift */,
+				AB635EE5296C7F52003C52E2 /* BLEUtils.swift */,
+				AB635EDE296C7E96003C52E2 /* ios */,
+				AB635EDD296C7E90003C52E2 /* esp */,
+			);
+			path = ble;
+			sourceTree = "<group>";
+		};
+		AB635EDD296C7E90003C52E2 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */,
+				AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		AB635EDE296C7E96003C52E2 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EE1296C7F33003C52E2 /* BLEObservableIos.swift */,
+				AB635EE7296C81CA003C52E2 /* BLEManagerIos.swift */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		AB635EEB296C835A003C52E2 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				AB635EEE296C8460003C52E2 /* VideoManager.swift */,
+				AB635EEC296C842F003C52E2 /* CustomVideoPlayer.swift */,
+				AB635EF0296C866F003C52E2 /* video.mp4 */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		AB635F99296D995F003C52E2 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */,
+				AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */,
+				AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB635EAD296C7B47003C52E2 /* Symbiose_macos_act1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB635ED3296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1" */;
+			buildPhases = (
+				AB635EAA296C7B47003C52E2 /* Sources */,
+				AB635EAB296C7B47003C52E2 /* Frameworks */,
+				AB635EAC296C7B47003C52E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Symbiose_macos_act1;
+			productName = Symbiose_macos_act1;
+			productReference = AB635EAE296C7B47003C52E2 /* Symbiose_macos_act1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB635EBE296C7B48003C52E2 /* Symbiose_macos_act1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB635ED6296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1Tests" */;
+			buildPhases = (
+				AB635EBB296C7B48003C52E2 /* Sources */,
+				AB635EBC296C7B48003C52E2 /* Frameworks */,
+				AB635EBD296C7B48003C52E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB635EC1296C7B48003C52E2 /* PBXTargetDependency */,
+			);
+			name = Symbiose_macos_act1Tests;
+			productName = Symbiose_macos_act1Tests;
+			productReference = AB635EBF296C7B48003C52E2 /* Symbiose_macos_act1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB635EC8296C7B48003C52E2 /* Symbiose_macos_act1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB635ED9296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1UITests" */;
+			buildPhases = (
+				AB635EC5296C7B48003C52E2 /* Sources */,
+				AB635EC6296C7B48003C52E2 /* Frameworks */,
+				AB635EC7296C7B48003C52E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB635ECB296C7B48003C52E2 /* PBXTargetDependency */,
+			);
+			name = Symbiose_macos_act1UITests;
+			productName = Symbiose_macos_act1UITests;
+			productReference = AB635EC9296C7B48003C52E2 /* Symbiose_macos_act1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB635EA6296C7B47003C52E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					AB635EAD296C7B47003C52E2 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					AB635EBE296C7B48003C52E2 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = AB635EAD296C7B47003C52E2;
+					};
+					AB635EC8296C7B48003C52E2 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = AB635EAD296C7B47003C52E2;
+					};
+				};
+			};
+			buildConfigurationList = AB635EA9296C7B47003C52E2 /* Build configuration list for PBXProject "Symbiose_macos_act1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB635EA5296C7B47003C52E2;
+			productRefGroup = AB635EAF296C7B47003C52E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB635EAD296C7B47003C52E2 /* Symbiose_macos_act1 */,
+				AB635EBE296C7B48003C52E2 /* Symbiose_macos_act1Tests */,
+				AB635EC8296C7B48003C52E2 /* Symbiose_macos_act1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB635EAC296C7B47003C52E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB635EB9296C7B48003C52E2 /* Preview Assets.xcassets in Resources */,
+				AB635EB6296C7B48003C52E2 /* Assets.xcassets in Resources */,
+				AB635EF4296CD341003C52E2 /* Symbiose-macos-act1-Info.plist in Resources */,
+				AB635EF1296C8673003C52E2 /* video.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EBD296C7B48003C52E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EC7296C7B48003C52E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB635EAA296C7B47003C52E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB635EB4296C7B47003C52E2 /* ContentView.swift in Sources */,
+				AB635FA0296DA306003C52E2 /* AudioSpectrogram.swift in Sources */,
+				AB635F9F296DA306003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
+				AB635F9C296D9985003C52E2 /* MicrophoneMonitor.swift in Sources */,
+				AB635EE6296C7F52003C52E2 /* BLEUtils.swift in Sources */,
+				AB635EE8296C81CA003C52E2 /* BLEManagerIos.swift in Sources */,
+				AB635EE0296C7F29003C52E2 /* BLEManagerEsp.swift in Sources */,
+				AB635EB2296C7B47003C52E2 /* Symbiose_macos_act1App.swift in Sources */,
+				AB635EE4296C7F3E003C52E2 /* BLEObservableEsp.swift in Sources */,
+				AB635EEA296C82B0003C52E2 /* BLEController.swift in Sources */,
+				AB635EEF296C8461003C52E2 /* VideoManager.swift in Sources */,
+				AB635EE2296C7F33003C52E2 /* BLEObservableIos.swift in Sources */,
+				AB635EED296C842F003C52E2 /* CustomVideoPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EBB296C7B48003C52E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB635EC4296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB635EC5296C7B48003C52E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB635ED0296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift in Sources */,
+				AB635ECE296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB635EC1296C7B48003C52E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB635EAD296C7B47003C52E2 /* Symbiose_macos_act1 */;
+			targetProxy = AB635EC0296C7B48003C52E2 /* PBXContainerItemProxy */;
+		};
+		AB635ECB296C7B48003C52E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB635EAD296C7B47003C52E2 /* Symbiose_macos_act1 */;
+			targetProxy = AB635ECA296C7B48003C52E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB635ED1296C7B48003C52E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB635ED2296C7B48003C52E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AB635ED4296C7B48003C52E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Symbiose_macos_act1/Symbiose_macos_act1.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Symbiose_macos_act1/Preview Content\"";
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Symbiose-macos-act1-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Ble;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ble desc";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = micro;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AB635ED5296C7B48003C52E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Symbiose_macos_act1/Symbiose_macos_act1.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Symbiose_macos_act1/Preview Content\"";
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Symbiose-macos-act1-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = Ble;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ble desc";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = micro;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AB635ED7296C7B48003C52E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Symbiose_macos_act1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Symbiose_macos_act1";
+			};
+			name = Debug;
+		};
+		AB635ED8296C7B48003C52E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Symbiose_macos_act1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Symbiose_macos_act1";
+			};
+			name = Release;
+		};
+		AB635EDA296C7B48003C52E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Symbiose_macos_act1;
+			};
+			name = Debug;
+		};
+		AB635EDB296C7B48003C52E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.Symbiose-macos-act1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Symbiose_macos_act1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB635EA9296C7B47003C52E2 /* Build configuration list for PBXProject "Symbiose_macos_act1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB635ED1296C7B48003C52E2 /* Debug */,
+				AB635ED2296C7B48003C52E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB635ED3296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB635ED4296C7B48003C52E2 /* Debug */,
+				AB635ED5296C7B48003C52E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB635ED6296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB635ED7296C7B48003C52E2 /* Debug */,
+				AB635ED8296C7B48003C52E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB635ED9296C7B48003C52E2 /* Build configuration list for PBXNativeTarget "Symbiose_macos_act1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB635EDA296C7B48003C52E2 /* Debug */,
+				AB635EDB296C7B48003C52E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB635EA6296C7B47003C52E2 /* Project object */;
+}
