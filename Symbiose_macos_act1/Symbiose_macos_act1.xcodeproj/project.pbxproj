@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0A4B70296F116000A88AEA /* FrequencyMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0A4B6F296F116000A88AEA /* FrequencyMatcher.swift */; };
 		AB635EB2296C7B47003C52E2 /* Symbiose_macos_act1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EB1296C7B47003C52E2 /* Symbiose_macos_act1App.swift */; };
 		AB635EB4296C7B47003C52E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EB3296C7B47003C52E2 /* ContentView.swift */; };
 		AB635EB6296C7B48003C52E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB635EB5296C7B48003C52E2 /* Assets.xcassets */; };
@@ -14,9 +15,7 @@
 		AB635EC4296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EC3296C7B48003C52E2 /* Symbiose_macos_act1Tests.swift */; };
 		AB635ECE296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635ECD296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift */; };
 		AB635ED0296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635ECF296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift */; };
-		AB635EE0296C7F29003C52E2 /* BLEManagerEsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */; };
 		AB635EE2296C7F33003C52E2 /* BLEObservableIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE1296C7F33003C52E2 /* BLEObservableIos.swift */; };
-		AB635EE4296C7F3E003C52E2 /* BLEObservableEsp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */; };
 		AB635EE6296C7F52003C52E2 /* BLEUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE5296C7F52003C52E2 /* BLEUtils.swift */; };
 		AB635EE8296C81CA003C52E2 /* BLEManagerIos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE7296C81CA003C52E2 /* BLEManagerIos.swift */; };
 		AB635EEA296C82B0003C52E2 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EE9296C82B0003C52E2 /* BLEController.swift */; };
@@ -47,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB0A4B6F296F116000A88AEA /* FrequencyMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyMatcher.swift; sourceTree = "<group>"; };
 		AB635EAE296C7B47003C52E2 /* Symbiose_macos_act1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Symbiose_macos_act1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB635EB1296C7B47003C52E2 /* Symbiose_macos_act1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1App.swift; sourceTree = "<group>"; };
 		AB635EB3296C7B47003C52E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,9 +58,7 @@
 		AB635EC9296C7B48003C52E2 /* Symbiose_macos_act1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Symbiose_macos_act1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB635ECD296C7B48003C52E2 /* Symbiose_macos_act1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1UITests.swift; sourceTree = "<group>"; };
 		AB635ECF296C7B48003C52E2 /* Symbiose_macos_act1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbiose_macos_act1UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp.swift; sourceTree = "<group>"; };
 		AB635EE1296C7F33003C52E2 /* BLEObservableIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableIos.swift; sourceTree = "<group>"; };
-		AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp.swift; sourceTree = "<group>"; };
 		AB635EE5296C7F52003C52E2 /* BLEUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEUtils.swift; sourceTree = "<group>"; };
 		AB635EE7296C81CA003C52E2 /* BLEManagerIos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerIos.swift; sourceTree = "<group>"; };
 		AB635EE9296C82B0003C52E2 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
@@ -165,18 +163,8 @@
 				AB635EE9296C82B0003C52E2 /* BLEController.swift */,
 				AB635EE5296C7F52003C52E2 /* BLEUtils.swift */,
 				AB635EDE296C7E96003C52E2 /* ios */,
-				AB635EDD296C7E90003C52E2 /* esp */,
 			);
 			path = ble;
-			sourceTree = "<group>";
-		};
-		AB635EDD296C7E90003C52E2 /* esp */ = {
-			isa = PBXGroup;
-			children = (
-				AB635EDF296C7F29003C52E2 /* BLEManagerEsp.swift */,
-				AB635EE3296C7F3E003C52E2 /* BLEObservableEsp.swift */,
-			);
-			path = esp;
 			sourceTree = "<group>";
 		};
 		AB635EDE296C7E96003C52E2 /* ios */ = {
@@ -204,6 +192,7 @@
 				AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */,
 				AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */,
 				AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */,
+				AB0A4B6F296F116000A88AEA /* FrequencyMatcher.swift */,
 			);
 			path = audio;
 			sourceTree = "<group>";
@@ -346,13 +335,12 @@
 				AB635F9C296D9985003C52E2 /* MicrophoneMonitor.swift in Sources */,
 				AB635EE6296C7F52003C52E2 /* BLEUtils.swift in Sources */,
 				AB635EE8296C81CA003C52E2 /* BLEManagerIos.swift in Sources */,
-				AB635EE0296C7F29003C52E2 /* BLEManagerEsp.swift in Sources */,
 				AB635EB2296C7B47003C52E2 /* Symbiose_macos_act1App.swift in Sources */,
-				AB635EE4296C7F3E003C52E2 /* BLEObservableEsp.swift in Sources */,
 				AB635EEA296C82B0003C52E2 /* BLEController.swift in Sources */,
 				AB635EEF296C8461003C52E2 /* VideoManager.swift in Sources */,
 				AB635EE2296C7F33003C52E2 /* BLEObservableIos.swift in Sources */,
 				AB635EED296C842F003C52E2 /* CustomVideoPlayer.swift in Sources */,
+				AB0A4B70296F116000A88AEA /* FrequencyMatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Symbiose_macos_act1/Symbiose_macos_act1.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -540,6 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Symbiose_macos_act1/Symbiose_macos_act1.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

@@ -69,7 +69,7 @@ class BLEController: NSWindowController, CBPeripheralManagerDelegate, Observable
     
     
     func startAdvertising() {
-        peripheralManager.startAdvertising([CBAdvertisementDataLocalNameKey : "symbioseact"])
+        peripheralManager.startAdvertising([CBAdvertisementDataLocalNameKey : "symbioseact1"])
         print("Started Advertising")
         
     }

@@ -53,12 +53,27 @@ extension AudioSpectrogram: AVCaptureAudioDataOutputSampleBufferDelegate {
 
         while self.rawAudioData.count >= AudioSpectrogram.sampleCount {
             let dataToProcess = Array(self.rawAudioData[0 ..< AudioSpectrogram.sampleCount])
+            // trouver la range de fréquence sur 1024
+            // slice et reduce
+            // si = à une certaine valeur ble
+//            print(dataToProcess)
+            /*
+            let slicedArray = dataToProcess[200...400]
+            DispatchQueue.main.async {
+                self.freqPomp = slicedArray.reduce(0, { x, y in
+                    (x / 10 + y / 10)
+                })
+            }*/
             self.rawAudioData.removeFirst(AudioSpectrogram.hopCount)
+            
             self.processData(values: dataToProcess)
         }
+        
+        
      
         createAudioSpectrogram()
     }
+    
     
     func configureCaptureSession() {
         // Also note that:

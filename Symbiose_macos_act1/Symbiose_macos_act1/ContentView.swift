@@ -29,11 +29,12 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var BLEactios:BLEObservableIos = BLEObservableIos()
-    @StateObject var BLEactesp:BLEObservableEsp = BLEObservableEsp()
     @StateObject var videoManager:VideoManager = VideoManager()
     @StateObject var bleController:BLEController = BLEController()
     
     @StateObject var audioSpectrogram:AudioSpectrogram = AudioSpectrogram()
+    
+    @State var act1ok:Bool = false
     
 //    @ObservedObject private var mic = MicrophoneMonitor(numberOfSamples: numberOfSamples)
     
@@ -46,24 +47,36 @@ struct ContentView: View {
     var body: some View {
         VStack {
             PlayerView(player: videoManager.player)
-            Button("send cc"){
-                BLEactios.sendString(str: "cc")
+            Button("step 2"){
+                videoManager.changeStep(step: 2)
+            }
+            Button("step 3"){
+                videoManager.changeStep(step: 3)
+            }
+            Button("step 4"){
+                videoManager.changeStep(step: 4)
+            }
+            Button("step 5"){
+                videoManager.changeStep(step: 5)
+            }
+            Button("step 6"){
+                videoManager.changeStep(step: 6)
+            }
+            Button("step 7"){
+                videoManager.changeStep(step: 7)
             }
             Text(BLEactios.connectedPeripheral?.name ?? "personne")
-            
         }
         .padding()
         .onAppear(){
             bleController.load()
-            audioSpectrogram.contentsGravity = .resize
-            
-            audioSpectrogram.startRunning()
+            FrequencyMatcher.instance.startListening()
+            //audioSpectrogram.startRunning()
         }
         .onChange(of: bleController.bleStatus, perform: { newValue in
             BLEactios.startScann()
         })
         .onChange(of: BLEactios.connectedPeripheral, perform: { newValue in
-            print("connected")
             if let p = newValue{
                 BLEactios.listen { r in
                     print(r)
@@ -72,26 +85,19 @@ struct ContentView: View {
         })
         .onChange(of: bleController.messageLabel) { newValue in
             if (newValue == "connected") {
-                BLEactesp.startScann()
+                videoManager.changeStep(step: 1)
+                audioSpectrogram.contentsGravity = .resize
+                audioSpectrogram.startRunning()
             }
         }
-        .onChange(of: BLEactesp.connectedPeripheral) { newValue in
-            if let p = newValue{
-                BLEactesp.listen { r in
-                    print(r)
-                }
-            }
-        }
-        .onChange(of: BLEactesp.isActivated) { newValue in
-            BLEactesp.sendString(str: "ok")
+        .onChange(of: audioSpectrogram.freqPomp) { newValue in
             
         }
-//        .onChange(of: mic.soundSamples) { newValue in
-//            for level in newValue {
-//                print(level)
-//            }
-//            
-//        }
+        .onChange(of: videoManager.currentTime) { newValue in
+            if (newValue > 50 && !act1ok) {
+                BLEactios.sendString(str: "act1_ok")
+            }
+        }
     }
 }
 

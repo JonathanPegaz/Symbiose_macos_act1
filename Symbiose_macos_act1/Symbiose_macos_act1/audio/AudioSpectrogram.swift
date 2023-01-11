@@ -10,6 +10,7 @@ import Accelerate
 public class AudioSpectrogram: CALayer, ObservableObject {
 
     // MARK: Initialization
+    @Published var freqPomp:Int16 = 0
     
     override init() {
         super.init()
@@ -64,13 +65,13 @@ public class AudioSpectrogram: CALayer, ObservableObject {
     ///
     /// The first call of `AudioSpectrogram.captureOutput(_:didOutput:from:)` calculates
     /// this value.
-    @Published var nyquistFrequency: Float?
+    var nyquistFrequency: Float?
     
     /// A buffer that contains the raw audio data from AVFoundation.
-    @Published var rawAudioData = [Int16]()
+    var rawAudioData = [Int16]()
     
     /// Raw frequency domain values.
-    @Published var frequencyDomainValues = [Float](repeating: 0,
+    var frequencyDomainValues = [Float](repeating: 0,
                                         count: bufferCount * sampleCount)
         
     var rgbImageFormat: vImage_CGImageFormat = {
@@ -166,7 +167,7 @@ public class AudioSpectrogram: CALayer, ObservableObject {
         }
         
         frequencyDomainValues.append(contentsOf: frequencyDomainBuffer)
-
+        
         dispatchSemaphore.signal()
     }
     

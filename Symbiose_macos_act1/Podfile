@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Symbiose_macos_act1' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'TensorFlowLiteSwift'
+
+  # Pods for Symbiose_macos_act1
+
+  target 'Symbiose_macos_act1Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Symbiose_macos_act1UITests' do
+    # Pods for testing
+  end
+
+end
