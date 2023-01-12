@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var BLEactios:BLEObservableIos = BLEObservableIos()
     @StateObject var videoManager:VideoManager = VideoManager()
     @StateObject var bleController:BLEController = BLEController()
     
@@ -36,7 +35,6 @@ struct ContentView: View {
             Button("step 7"){
                 videoManager.changeStep(step: 7)
             }
-            Text(BLEactios.connectedPeripheral?.name ?? "personne")
         }
         .padding()
         .onAppear(){
@@ -54,7 +52,6 @@ struct ContentView: View {
         .onChange(of: videoManager.step) { newValue in
             if (newValue == 7) {
                 bleController.sendEndValue()
-                
             }
         }
     }
