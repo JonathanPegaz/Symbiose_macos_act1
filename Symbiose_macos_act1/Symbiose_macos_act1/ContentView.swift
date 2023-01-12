@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
     @StateObject var videoManager:VideoManager = VideoManager()
@@ -27,6 +28,14 @@ struct ContentView: View {
         })
         .onChange(of: bleController.messageLabel) { newValue in
             if (newValue == "start") {
+                videoManager.changeStep(step: 1)
+                freqMactcher.startListening()
+            }
+            if (newValue == "reset") {
+                videoManager.player.pause()
+                var videoStartTime: CMTime = CMTimeMake(value: 0, timescale: 1)
+                videoManager.player.seek(to: videoStartTime)
+                videoManager.player.rate = 1.0
                 videoManager.changeStep(step: 1)
                 freqMactcher.startListening()
             }
