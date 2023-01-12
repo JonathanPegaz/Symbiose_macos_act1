@@ -17,27 +17,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             PlayerView(player: videoManager.player)
-            Button("start"){
-                bleController.messageLabel = "start"
-            }
-            Button("step 2"){
-                videoManager.changeStep(step: 2)
-            }
-            Button("step 3"){
-                videoManager.changeStep(step: 3)
-            }
-            Button("step 4"){
-                videoManager.changeStep(step: 4)
-            }
-            Button("step 5"){
-                videoManager.changeStep(step: 5)
-            }
-            Button("step 6"){
-                videoManager.changeStep(step: 6)
-            }
-            Button("step 7"){
-                videoManager.changeStep(step: 7)
-            }
         }
         .padding()
         .onAppear(){
