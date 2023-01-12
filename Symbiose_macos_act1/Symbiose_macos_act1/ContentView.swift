@@ -7,42 +7,12 @@
 
 import SwiftUI
 
-// Add this to the top of our ContentView.swift file.
-//let numberOfSamples: Int = 10
-//
-//struct BarView: View {
-//   // 1
-//    var value: CGFloat
-//
-//    var body: some View {
-//        ZStack {
-//           // 2
-//            RoundedRectangle(cornerRadius: 20)
-//                .fill(LinearGradient(gradient: Gradient(colors: [.purple, .blue]),
-//                                     startPoint: .top,
-//                                     endPoint: .bottom))
-//                // 3
-//                .frame(width: (200 - CGFloat(numberOfSamples) * 4) / CGFloat(numberOfSamples), height: value)
-//        }
-//    }
-//}
-
 struct ContentView: View {
     @StateObject var BLEactios:BLEObservableIos = BLEObservableIos()
     @StateObject var videoManager:VideoManager = VideoManager()
     @StateObject var bleController:BLEController = BLEController()
     
-    @StateObject var audioSpectrogram:AudioSpectrogram = AudioSpectrogram()
-    
     @State var act1ok:Bool = false
-    
-//    @ObservedObject private var mic = MicrophoneMonitor(numberOfSamples: numberOfSamples)
-    
-//    private func normalizeSoundLevel(level: Float) -> CGFloat {
-//            let level = max(0.2, CGFloat(level) + 50) / 2 // between 0.1 and 25
-//
-//            return CGFloat(level * (300 / 25)) // scaled to max at 300 (our height of our bar)
-//        }
     
     var body: some View {
         VStack {
@@ -61,6 +31,7 @@ struct ContentView: View {
             }
             Button("step 6"){
                 videoManager.changeStep(step: 6)
+                bleController.sendEndValue()
             }
             Button("step 7"){
                 videoManager.changeStep(step: 7)
@@ -70,32 +41,20 @@ struct ContentView: View {
         .padding()
         .onAppear(){
             bleController.load()
-            FrequencyMatcher.instance.startListening()
-            //audioSpectrogram.startRunning()
         }
         .onChange(of: bleController.bleStatus, perform: { newValue in
-            BLEactios.startScann()
-        })
-        .onChange(of: BLEactios.connectedPeripheral, perform: { newValue in
-            if let p = newValue{
-                BLEactios.listen { r in
-                    print(r)
-                }
-            }
+            bleController.addServices()
         })
         .onChange(of: bleController.messageLabel) { newValue in
-            if (newValue == "connected") {
+            if (newValue == "start") {
                 videoManager.changeStep(step: 1)
-                audioSpectrogram.contentsGravity = .resize
-                audioSpectrogram.startRunning()
+                FrequencyMatcher.instance.startListening()
             }
         }
-        .onChange(of: audioSpectrogram.freqPomp) { newValue in
-            
-        }
-        .onChange(of: videoManager.currentTime) { newValue in
-            if (newValue > 50 && !act1ok) {
-                BLEactios.sendString(str: "act1_ok")
+        .onChange(of: videoManager.step) { newValue in
+            if (newValue == 7) {
+                bleController.sendEndValue()
+                
             }
         }
     }

@@ -20,7 +20,10 @@ class BLEController: NSWindowController, CBPeripheralManagerDelegate, Observable
     private var service: CBUUID!
     private let value = "BD34E"
     private var peripheralManager : CBPeripheralManager!
-
+    
+    var myCharacteristic1:CBMutableCharacteristic?
+    var myCharacteristic2:CBMutableCharacteristic?
+    
     func load() {
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
     }
@@ -40,43 +43,44 @@ class BLEController: NSWindowController, CBPeripheralManagerDelegate, Observable
         case .poweredOn:
             print("Bluetooth Device is POWERED ON")
             self.bleStatus = true
-            self.addServices()
-        @unknown default:
-            fatalError()
-        }
-    }
-
+          @unknown default:
+              fatalError()
+          }
+      }
+    
     func addServices() {
-        let valueData = value.data(using: .utf8)
-        // 1. Create instance of CBMutableCharcateristic
-        let myCharacteristic1 = CBMutableCharacteristic(type: writeCBUUID, properties: [.notify, .write, .read], value: nil, permissions: [.readable, .writeable])
-        let myCharacteristic2 = CBMutableCharacteristic(type: readCBUUID, properties: [.read], value: valueData, permissions: [.readable])
-       
-        // 2. Create instance of CBMutableService
-        service = authCBUUID
-        let myService = CBMutableService(type: service, primary: true)
+            let valueData = value.data(using: .utf8)
+            // 1. Create instance of CBMutableCharcateristic
+            myCharacteristic1 = CBMutableCharacteristic(type: writeCBUUID, properties: [.notify, .write, .read], value: nil, permissions: [.readable, .writeable])
+            myCharacteristic2 = CBMutableCharacteristic(type: readCBUUID, properties: [.notify, .write, .read], value: nil, permissions: [.readable, .writeable])
+           
+            // 2. Create instance of CBMutableService
+            service = authCBUUID
+            let myService = CBMutableService(type: service, primary: true)
+            
+            // 3. Add characteristics to the service
+            myService.characteristics = [myCharacteristic1!, myCharacteristic2!]
+            
+            // 4. Add service to peripheralManager
+            peripheralManager.add(myService)
+            
+            // 5. Start advertising
+            startAdvertising()
+           
+        }
         
-        // 3. Add characteristics to the service
-        myService.characteristics = [myCharacteristic1, myCharacteristic2]
-        
-        // 4. Add service to peripheralManager
-        peripheralManager.add(myService)
-        
-        // 5. Start advertising
-        startAdvertising()
-       
-    }
-    
-    
-    func startAdvertising() {
-        peripheralManager.startAdvertising([CBAdvertisementDataLocalNameKey : "symbioseact1"])
-        print("Started Advertising")
-        
-    }
-    func stopAdvertising() {
-        peripheralManager.stopAdvertising()
-        
-    }
+        func startAdvertising() {
+            peripheralManager.startAdvertising([CBAdvertisementDataLocalNameKey : "symbioseact1"])
+            print("Started Advertising")
+            
+        }
+        func stopAdvertising() {
+            peripheralManager.stopAdvertising()
+            
+        }
+        func sendEndValue(){
+            peripheralManager.updateValue("end".data(using: .utf8)!, for: myCharacteristic1!, onSubscribedCentrals: nil)
+        }
 
     
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
@@ -97,9 +101,7 @@ class BLEController: NSWindowController, CBPeripheralManagerDelegate, Observable
         if let value = requests.first?.value {
            writeValueLabel = value.hexEncodedString2()
             //Perform here your additional operations on the data you get
-            if let string = String(bytes: value, encoding: .utf8) {
-                print(string)
-                self.messageLabel = string
+            if let string = String(bytes: value, encoding: .utf8) {                self.messageLabel = string
             }
         }
     }

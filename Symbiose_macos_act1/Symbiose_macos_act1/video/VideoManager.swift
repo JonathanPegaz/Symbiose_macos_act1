@@ -61,26 +61,28 @@ class VideoManager: ObservableObject {
                 print("step4")
                 var videoStartTime: CMTime = CMTimeMake(value: 18, timescale: 1)
                 player.seek(to: videoStartTime)
+                self.step = 4
             
             case 5:
                 print("step6")
                 var videoStartTime: CMTime = CMTimeMake(value: 24, timescale: 1)
                 player.seek(to: videoStartTime)
+                self.step = 5
             
             case 6:
                 print("step6")
                 var videoStartTime: CMTime = CMTimeMake(value: 30, timescale: 1)
                 player.seek(to: videoStartTime)
+                self.step = 6
             
             case 7:
+                self.step = 7
                 var videoStartTime: CMTime = CMTimeMake(value: 36, timescale: 1)
                 player.seek(to: videoStartTime)
                 self.player.play()
             default:
                 print("Cette étape n'existe pas")
         }
-        print(self.loopDelay)
-        print(self.anchorDelay)
         
         let loopTime = CMTime(seconds: self.loopDelay, preferredTimescale: 60000)
         let anchorTime = CMTime(seconds: self.anchorDelay, preferredTimescale: 60000)

@@ -23,9 +23,6 @@
 		AB635EEF296C8461003C52E2 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635EEE296C8460003C52E2 /* VideoManager.swift */; };
 		AB635EF1296C8673003C52E2 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB635EF0296C866F003C52E2 /* video.mp4 */; };
 		AB635EF4296CD341003C52E2 /* Symbiose-macos-act1-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB635EF3296CD340003C52E2 /* Symbiose-macos-act1-Info.plist */; };
-		AB635F9C296D9985003C52E2 /* MicrophoneMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */; };
-		AB635F9F296DA306003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */; };
-		AB635FA0296DA306003C52E2 /* AudioSpectrogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +63,6 @@
 		AB635EEE296C8460003C52E2 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		AB635EF0296C866F003C52E2 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		AB635EF3296CD340003C52E2 /* Symbiose-macos-act1-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Symbiose-macos-act1-Info.plist"; sourceTree = "<group>"; };
-		AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneMonitor.swift; sourceTree = "<group>"; };
-		AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift"; sourceTree = "<group>"; };
-		AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSpectrogram.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,9 +183,6 @@
 		AB635F99296D995F003C52E2 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				AB635F9E296DA306003C52E2 /* AudioSpectrogram.swift */,
-				AB635F9D296DA305003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift */,
-				AB635F9B296D9985003C52E2 /* MicrophoneMonitor.swift */,
 				AB0A4B6F296F116000A88AEA /* FrequencyMatcher.swift */,
 			);
 			path = audio;
@@ -330,9 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB635EB4296C7B47003C52E2 /* ContentView.swift in Sources */,
-				AB635FA0296DA306003C52E2 /* AudioSpectrogram.swift in Sources */,
-				AB635F9F296DA306003C52E2 /* AudioSpectrogram+AVCaptureAudioDataOutputSampleBufferDelegate.swift in Sources */,
-				AB635F9C296D9985003C52E2 /* MicrophoneMonitor.swift in Sources */,
 				AB635EE6296C7F52003C52E2 /* BLEUtils.swift in Sources */,
 				AB635EE8296C81CA003C52E2 /* BLEManagerIos.swift in Sources */,
 				AB635EB2296C7B47003C52E2 /* Symbiose_macos_act1App.swift in Sources */,
