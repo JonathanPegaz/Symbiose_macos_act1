@@ -10,12 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var videoManager:VideoManager = VideoManager()
     @StateObject var bleController:BLEController = BLEController()
+    @StateObject var freqMactcher: FrequencyMatcher = FrequencyMatcher()
     
     @State var act1ok:Bool = false
     
     var body: some View {
         VStack {
             PlayerView(player: videoManager.player)
+            Button("start"){
+                bleController.messageLabel = "start"
+            }
             Button("step 2"){
                 videoManager.changeStep(step: 2)
             }
@@ -30,7 +34,6 @@ struct ContentView: View {
             }
             Button("step 6"){
                 videoManager.changeStep(step: 6)
-                bleController.sendEndValue()
             }
             Button("step 7"){
                 videoManager.changeStep(step: 7)
@@ -46,11 +49,24 @@ struct ContentView: View {
         .onChange(of: bleController.messageLabel) { newValue in
             if (newValue == "start") {
                 videoManager.changeStep(step: 1)
-                FrequencyMatcher.instance.startListening()
+                freqMactcher.startListening()
             }
         }
-        .onChange(of: FrequencyMatcher.instance.freqResult, perform: { newValue in
-            print("\(newValue) Hz")
+        .onChange(of: freqMactcher.freqResult, perform: { newValue in
+            if(videoManager.step < 7){
+                if (videoManager.currentTime < videoManager.timelimit) {
+                    videoManager.player.rate *= 1.2
+                } else {
+                    videoManager.changeStep(step: videoManager.step + 1)
+                }
+            }
+        })
+        .onChange(of: videoManager.currentTime, perform: { newValue in
+            if (newValue > videoManager.timelimit && videoManager.step < 7) {
+                videoManager.player.rate = 1.0
+                videoManager.player.pause()
+                print("pause")
+            }
         })
         .onChange(of: videoManager.step) { newValue in
             if (newValue == 7) {

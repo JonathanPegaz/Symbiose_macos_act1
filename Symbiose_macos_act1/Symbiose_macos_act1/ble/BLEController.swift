@@ -79,7 +79,7 @@ class BLEController: NSWindowController, CBPeripheralManagerDelegate, Observable
             
         }
         func sendEndValue(){
-            peripheralManager.updateValue("end".data(using: .utf8)!, for: myCharacteristic1!, onSubscribedCentrals: nil)
+            peripheralManager.updateValue("endact1".data(using: .utf8)!, for: myCharacteristic1!, onSubscribedCentrals: nil)
         }
 
     

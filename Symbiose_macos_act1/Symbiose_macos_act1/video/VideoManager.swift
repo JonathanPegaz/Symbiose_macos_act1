@@ -14,6 +14,7 @@ class VideoManager: ObservableObject {
     @Published var step = 0
     @Published private var boundaryTimeObserver:Any?
     @Published var currentTime: Double = 0.0
+    @Published var timelimit: Double = 0.0
     
     private var timeObservation: Any?
     
@@ -42,43 +43,56 @@ class VideoManager: ObservableObject {
         switch step {
             
             case 1:
+                self.timelimit = 3
+                self.player.play()
                 self.step = 1
                 
 
             case 2:
                 print("step2")
-                var videoStartTime: CMTime = CMTimeMake(value: 6, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 6, timescale: 1)
+//                player.seek(to: videoStartTime)
+                self.timelimit = 6
+                self.player.play()
                 self.step = 2
             
             case 3:
                 print("step3")
-                var videoStartTime: CMTime = CMTimeMake(value: 12, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 12, timescale: 1)
+//                player.seek(to: videoStartTime)
                 self.step = 3
+                self.timelimit = 12
+                self.player.play()
         
             case 4:
                 print("step4")
-                var videoStartTime: CMTime = CMTimeMake(value: 18, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 18, timescale: 1)
+//                player.seek(to: videoStartTime)
                 self.step = 4
+                self.timelimit = 18
+                self.player.play()
             
             case 5:
                 print("step6")
-                var videoStartTime: CMTime = CMTimeMake(value: 24, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 24, timescale: 1)
+//                player.seek(to: videoStartTime)
                 self.step = 5
+                self.timelimit = 24
+                self.player.play()
             
             case 6:
                 print("step6")
-                var videoStartTime: CMTime = CMTimeMake(value: 30, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 30, timescale: 1)
+//                player.seek(to: videoStartTime)
                 self.step = 6
+                self.timelimit = 30
+                self.player.play()
             
             case 7:
                 self.step = 7
-                var videoStartTime: CMTime = CMTimeMake(value: 36, timescale: 1)
-                player.seek(to: videoStartTime)
+//                var videoStartTime: CMTime = CMTimeMake(value: 36, timescale: 1)
+//                player.seek(to: videoStartTime)
+                self.timelimit = 36
                 self.player.play()
             default:
                 print("Cette étape n'existe pas")

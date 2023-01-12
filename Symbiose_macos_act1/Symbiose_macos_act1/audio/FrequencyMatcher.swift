@@ -12,7 +12,6 @@ import Accelerate
 class FrequencyMatcher: ObservableObject {
     @Published var freqResult:Float = 0.0
     let audioEngine = AVAudioEngine()
-    static let instance = FrequencyMatcher()
     var sampleRate:Float = 44100.0
     var fftSize:Float = 1024.0
     
@@ -59,7 +58,8 @@ class FrequencyMatcher: ObservableObject {
         if let idx = reals.firstIndex(of: maxValue){
             let fq = frequencyStepForIndex(Float(idx))
             if fq > 10000 && fq < 13000 {
-                freqResult = fq
+                print("freqmatcher \(fq)")
+                self.freqResult = fq
             }
             //print(maxValue)
         }
