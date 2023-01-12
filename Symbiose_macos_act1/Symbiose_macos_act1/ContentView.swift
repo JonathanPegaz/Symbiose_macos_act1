@@ -49,6 +49,9 @@ struct ContentView: View {
                 FrequencyMatcher.instance.startListening()
             }
         }
+        .onChange(of: FrequencyMatcher.instance.freqResult, perform: { newValue in
+            print("\(newValue) Hz")
+        })
         .onChange(of: videoManager.step) { newValue in
             if (newValue == 7) {
                 bleController.sendEndValue()
