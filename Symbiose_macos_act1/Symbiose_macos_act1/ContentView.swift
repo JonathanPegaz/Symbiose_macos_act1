@@ -13,11 +13,20 @@ struct ContentView: View {
     @StateObject var bleController:BLEController = BLEController()
     @StateObject var freqMactcher: FrequencyMatcher = FrequencyMatcher()
     
+    @State var isReady: Bool = false
+    
     @State var act1ok:Bool = false
     
     var body: some View {
         VStack {
             PlayerView(player: videoManager.player)
+//            Button("skip"){
+//                videoManager.changeStep(step: 7)
+//            }
+//            Button("reset"){
+//                videoManager.changeStep(step: 1)
+//                bleController.messageLabel = ""
+//            }
         }
         .padding()
         .onAppear(){
@@ -25,35 +34,36 @@ struct ContentView: View {
         }
         .onChange(of: bleController.bleStatus, perform: { newValue in
             bleController.addServices()
+            freqMactcher.startListening()
         })
         .onChange(of: bleController.messageLabel) { newValue in
+            
             if (newValue == "start") {
+                isReady = true
                 videoManager.changeStep(step: 1)
-                freqMactcher.startListening()
             }
             if (newValue == "reset") {
-                videoManager.player.pause()
-                var videoStartTime: CMTime = CMTimeMake(value: 0, timescale: 1)
-                videoManager.player.seek(to: videoStartTime)
-                videoManager.player.rate = 1.0
+//                videoManager.player.rate = 1.0
+//                videoManager.player.pause()
                 videoManager.changeStep(step: 1)
-                freqMactcher.startListening()
+                bleController.messageLabel = ""
             }
         }
         .onChange(of: freqMactcher.freqResult, perform: { newValue in
-            if(videoManager.step < 7){
+            if(videoManager.step < 7 && isReady){
                 if (videoManager.currentTime < videoManager.timelimit) {
                     videoManager.player.rate *= 1.2
-                } else {
+                }
+                else {
                     videoManager.changeStep(step: videoManager.step + 1)
                 }
             }
         })
         .onChange(of: videoManager.currentTime, perform: { newValue in
+            print(newValue)
             if (newValue > videoManager.timelimit && videoManager.step < 7) {
                 videoManager.player.rate = 1.0
                 videoManager.player.pause()
-                print("pause")
             }
         })
         .onChange(of: videoManager.step) { newValue in

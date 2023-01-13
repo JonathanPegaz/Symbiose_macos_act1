@@ -43,18 +43,22 @@ class VideoManager: ObservableObject {
         switch step {
             
             case 1:
-                self.timelimit = 3
-                self.player.play()
+                var videoStartTime: CMTime = CMTimeMake(value: 0, timescale: 1)
+                player.seek(to: videoStartTime)
                 self.step = 1
+                self.timelimit = 3
+                
+                self.player.play()
+                
                 
 
             case 2:
                 print("step2")
-//                var videoStartTime: CMTime = CMTimeMake(value: 6, timescale: 1)
-//                player.seek(to: videoStartTime)
+                
+                self.step = 2
                 self.timelimit = 6
                 self.player.play()
-                self.step = 2
+                
             
             case 3:
                 print("step3")
