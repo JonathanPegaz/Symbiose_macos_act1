@@ -150,8 +150,8 @@
 		AB635EDC296C7BE9003C52E2 /* ble */ = {
 			isa = PBXGroup;
 			children = (
-				AB635EE9296C82B0003C52E2 /* BLEController.swift */,
 				AB635EE5296C7F52003C52E2 /* BLEUtils.swift */,
+				AB635EE9296C82B0003C52E2 /* BLEController.swift */,
 			);
 			path = ble;
 			sourceTree = "<group>";

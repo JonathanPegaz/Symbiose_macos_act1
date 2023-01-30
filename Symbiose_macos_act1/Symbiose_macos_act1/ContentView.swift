@@ -20,13 +20,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             PlayerView(player: videoManager.player)
-//            Button("skip"){
-//                videoManager.changeStep(step: 7)
-//            }
-//            Button("reset"){
-//                videoManager.changeStep(step: 1)
-//                bleController.messageLabel = ""
-//            }
         }
         .padding()
         .onAppear(){
@@ -42,12 +35,16 @@ struct ContentView: View {
                 isReady = true
                 videoManager.changeStep(step: 1)
             }
-            if (newValue == "reset") {
-//                videoManager.player.rate = 1.0
-//                videoManager.player.pause()
-                videoManager.changeStep(step: 1)
-                bleController.messageLabel = ""
+            
+            if (newValue == "skip") {
+                videoManager.changeStep(step: 7)
             }
+            
+            if (newValue == "reset") {
+                videoManager.changeStep(step: 1)
+            }
+            
+            bleController.messageLabel = ""
         }
         .onChange(of: freqMactcher.freqResult, perform: { newValue in
             if(videoManager.step < 7 && isReady){

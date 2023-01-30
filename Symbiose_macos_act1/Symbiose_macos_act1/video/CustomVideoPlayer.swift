@@ -38,6 +38,8 @@ struct PlayerView: NSViewRepresentable {
         }
 
         view.player = player
+        view.showsFullScreenToggleButton = true
+//        view.enterFullScreenMode(.main!)
     }
 
     func makeNSView(context: Context) -> NSView {
